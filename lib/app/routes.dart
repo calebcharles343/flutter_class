@@ -2,12 +2,39 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_class1/presentation/screens/home_screen.dart';
 import 'package:flutter_class1/presentation/screens/main_screen.dart';
+
+// Layout screens
 import 'package:flutter_class1/presentation/screens/layout/column_screen.dart';
 import 'package:flutter_class1/presentation/screens/layout/grid_screen.dart';
 import 'package:flutter_class1/presentation/screens/layout/list_screen.dart';
 import 'package:flutter_class1/presentation/screens/layout/row_screen.dart';
 import 'package:flutter_class1/presentation/screens/layout/stack_screen.dart';
 import 'package:flutter_class1/presentation/screens/layout/table_screen.dart';
+
+// Navigation screens
+import 'package:flutter_class1/presentation/screens/navigation/bottom_nav_screen.dart';
+import 'package:flutter_class1/presentation/screens/navigation/tabs_screen.dart';
+import 'package:flutter_class1/presentation/screens/navigation/drawer_screen.dart';
+
+// Animation screens
+import 'package:flutter_class1/presentation/screens/animation/basic_animation_screen.dart';
+import 'package:flutter_class1/presentation/screens/animation/transitions_screen.dart';
+import 'package:flutter_class1/presentation/screens/animation/hero_animation_screen.dart';
+
+// UI Components screens
+import 'package:flutter_class1/presentation/screens/ui/checkboxes_screen.dart';
+import 'package:flutter_class1/presentation/screens/ui/switches_screen.dart';
+import 'package:flutter_class1/presentation/screens/ui/dropdowns_screen.dart';
+import 'package:flutter_class1/presentation/screens/ui/dialogs_screen.dart';
+import 'package:flutter_class1/presentation/screens/ui/snackbars_screen.dart';
+
+// Gestures screens
+import 'package:flutter_class1/presentation/screens/gestures/tap_screen.dart';
+import 'package:flutter_class1/presentation/screens/gestures/drag_screen.dart';
+import 'package:flutter_class1/presentation/screens/gestures/scale_screen.dart';
+import 'package:flutter_class1/presentation/screens/gestures/swipe_screen.dart';
+import 'package:flutter_class1/presentation/screens/gestures/gesture_detector_screen.dart';
+import 'package:flutter_class1/presentation/screens/gestures/pointer_screen.dart';
 
 class Routes {
   static const home = '/';
@@ -31,6 +58,21 @@ class Routes {
   static const animationTransitions = '/animation/transitions';
   static const animationHero = '/animation/hero';
 
+  // UI Components routes
+  static const uiCheckboxes = '/ui/checkboxes';
+  static const uiSwitches = '/ui/switches';
+  static const uiDropdowns = '/ui/dropdowns';
+  static const uiDialogs = '/ui/dialogs';
+  static const uiSnackbars = '/ui/snackbars';
+
+  // Gestures routes
+  static const gesturesTap = '/gestures/tap';
+  static const gesturesDrag = '/gestures/drag';
+  static const gesturesScale = '/gestures/scale';
+  static const gesturesSwipe = '/gestures/swipe';
+  static const gesturesDetector = '/gestures/detector';
+  static const gesturesPointer = '/gestures/pointer';
+
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case home:
@@ -52,9 +94,47 @@ class Routes {
       case layoutTable:
         return MaterialPageRoute(builder: (_) => const TableScreen());
 
-      // Navigation routes (create these screens when needed)
-      // case navigationBottomNav:
-      //   return MaterialPageRoute(builder: (_) => const BottomNavScreen());
+      // Navigation routes
+      case navigationBottomNav:
+        return MaterialPageRoute(builder: (_) => const BottomNavScreen());
+      case navigationTabs:
+        return MaterialPageRoute(builder: (_) => const TabsScreen());
+      case navigationDrawer:
+        return MaterialPageRoute(builder: (_) => const DrawerScreen());
+
+      // Animation routes
+      case animationBasic:
+        return MaterialPageRoute(builder: (_) => const BasicAnimationScreen());
+      case animationTransitions:
+        return MaterialPageRoute(builder: (_) => const TransitionsScreen());
+      case animationHero:
+        return MaterialPageRoute(builder: (_) => const HeroAnimationScreen());
+
+      // UI Components routes
+      case uiCheckboxes:
+        return MaterialPageRoute(builder: (_) => const CheckboxesScreen());
+      case uiSwitches:
+        return MaterialPageRoute(builder: (_) => const SwitchesScreen());
+      case uiDropdowns:
+        return MaterialPageRoute(builder: (_) => const DropdownsScreen());
+      case uiDialogs:
+        return MaterialPageRoute(builder: (_) => const DialogsScreen());
+      case uiSnackbars:
+        return MaterialPageRoute(builder: (_) => const SnackbarsScreen());
+
+      // Gestures routes
+      case gesturesTap:
+        return MaterialPageRoute(builder: (_) => const TapScreen());
+      case gesturesDrag:
+        return MaterialPageRoute(builder: (_) => const DragScreen());
+      case gesturesScale:
+        return MaterialPageRoute(builder: (_) => const ScaleScreen());
+      case gesturesSwipe:
+        return MaterialPageRoute(builder: (_) => const SwipeScreen());
+      case gesturesDetector:
+        return MaterialPageRoute(builder: (_) => const GestureDetectorScreen());
+      case gesturesPointer:
+        return MaterialPageRoute(builder: (_) => const PointerScreen());
 
       default:
         return _errorRoute(settings.name);
