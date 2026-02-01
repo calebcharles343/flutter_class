@@ -19,7 +19,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Bottom Navigation')),
+      // appBar: AppBar(title: const Text('Bottom Navigation')),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,

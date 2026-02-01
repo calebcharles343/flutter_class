@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class1/presentation/screens/navigation/drawer_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,12 +20,29 @@ class HomeScreen extends StatelessWidget {
             ),
             padding: EdgeInsets.all(24),
 
-            child: Row(
+            child: Column(
               children: [
-                Icon(Icons.book, color: Colors.white, size: 64),
-                Text(
-                  "Flutter Class",
-                  style: TextStyle(fontSize: 32, color: Colors.grey.shade100),
+                Row(
+                  children: [
+                    Icon(Icons.book, color: Colors.white, size: 64),
+                    Text(
+                      "Flutter Class",
+                      style: TextStyle(
+                        fontSize: 32,
+                        color: Colors.grey.shade100,
+                      ),
+                    ),
+                  ],
+                ),
+
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DrawerScreen()),
+                    );
+                  },
+                  child: Text("Go to Drawer Navigation"),
                 ),
               ],
             ),

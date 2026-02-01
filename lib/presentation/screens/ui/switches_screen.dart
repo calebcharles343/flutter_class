@@ -17,7 +17,7 @@ class _SwitchesScreenState extends State<SwitchesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Switches & Sliders')),
+      // appBar: AppBar(title: const Text('Switches & Sliders')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(

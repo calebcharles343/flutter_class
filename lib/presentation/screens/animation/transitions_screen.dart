@@ -16,7 +16,7 @@ class _TransitionsScreenState extends State<TransitionsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Transitions')),
+      // appBar: AppBar(title: const Text('Transitions')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(

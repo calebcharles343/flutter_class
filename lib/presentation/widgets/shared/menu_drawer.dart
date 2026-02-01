@@ -39,7 +39,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
             DrawerHeader(
               decoration: BoxDecoration(color: Colors.grey.shade800),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   const Icon(Icons.class_, size: 48, color: Colors.white),

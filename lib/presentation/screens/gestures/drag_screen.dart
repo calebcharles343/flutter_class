@@ -14,7 +14,7 @@ class _DragScreenState extends State<DragScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Drag Gesture')),
+      // appBar: AppBar(title: const Text('Drag Gesture')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

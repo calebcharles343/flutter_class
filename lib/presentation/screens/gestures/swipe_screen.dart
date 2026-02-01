@@ -15,7 +15,7 @@ class _SwipeScreenState extends State<SwipeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Swipe Gesture')),
+      // appBar: AppBar(title: const Text('Swipe Gesture')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

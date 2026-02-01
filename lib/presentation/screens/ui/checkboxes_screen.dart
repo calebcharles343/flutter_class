@@ -16,7 +16,7 @@ class _CheckboxesScreenState extends State<CheckboxesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Checkboxes & Radio')),
+      // appBar: AppBar(title: const Text('Checkboxes & Radio')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(

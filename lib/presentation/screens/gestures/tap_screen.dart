@@ -37,7 +37,7 @@ class _TapScreenState extends State<TapScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Tap Variations')),
+      // appBar: AppBar(title: const Text('Tap Variations')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

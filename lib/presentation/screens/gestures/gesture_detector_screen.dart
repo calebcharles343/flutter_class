@@ -1,5 +1,35 @@
 import 'package:flutter/material.dart';
 
+class GestureDetectorScreen extends StatelessWidget {
+  const GestureDetectorScreen({super.key});
+
+  void userTap() {
+    print("⭐⭐ User Taped ⭐⭐");
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // appBar: AppBar(title: const Text('Gesture Detector')),
+    return Scaffold(
+      // appBar: AppBar(title: const Text('Gesture Detector')),
+      body: Center(
+        child: GestureDetector(
+          onTap: userTap,
+          child: Container(
+            height: 200,
+            width: 200,
+            color: Colors.deepOrange.shade500,
+            child: Center(
+              child: Text("Tap Me!", style: TextStyle(fontSize: 24)),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/*
 class GestureDetectorScreen extends StatefulWidget {
   const GestureDetectorScreen({super.key});
 
@@ -14,7 +44,7 @@ class _GestureDetectorScreenState extends State<GestureDetectorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Gesture Detector')),
+      // appBar: AppBar(title: const Text('Gesture Detector')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -60,3 +90,4 @@ class _GestureDetectorScreenState extends State<GestureDetectorScreen> {
     );
   }
 }
+*/

@@ -144,7 +144,7 @@ class Routes {
   static MaterialPageRoute _errorRoute(String? routeName) {
     return MaterialPageRoute(
       builder: (_) => Scaffold(
-        appBar: AppBar(title: const Text('Error')),
+        // appBar: AppBar(title: const Text('Error')),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

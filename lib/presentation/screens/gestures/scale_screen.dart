@@ -14,7 +14,7 @@ class _ScaleScreenState extends State<ScaleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Scale Gesture')),
+      // appBar: AppBar(title: const Text('Scale Gesture')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

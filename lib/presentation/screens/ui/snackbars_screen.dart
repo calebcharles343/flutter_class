@@ -16,7 +16,7 @@ class _SnackbarsScreenState extends State<SnackbarsScreen> {
     return ScaffoldMessenger(
       key: _scaffoldMessengerKey,
       child: Scaffold(
-        appBar: AppBar(title: const Text('Snackbars & Toasts')),
+        // appBar: AppBar(title: const Text('Snackbars & Toasts')),
         body: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(

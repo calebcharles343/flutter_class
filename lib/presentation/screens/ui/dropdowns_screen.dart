@@ -47,7 +47,7 @@ class _DropdownsScreenState extends State<DropdownsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Dropdowns & Pickers')),
+      // appBar: AppBar(title: const Text('Dropdowns & Pickers')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(

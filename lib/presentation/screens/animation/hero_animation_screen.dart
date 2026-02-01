@@ -6,7 +6,7 @@ class HeroAnimationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Hero Animation')),
+      // appBar: AppBar(title: const Text('Hero Animation')),
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [

@@ -74,7 +74,7 @@ class _BasicAnimationScreenState extends State<BasicAnimationScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Basic Animation')),
+      // appBar: AppBar(title: const Text('Basic Animation')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

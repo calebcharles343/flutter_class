@@ -15,7 +15,7 @@ class _PointerScreenState extends State<PointerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Pointer Events')),
+      // appBar: AppBar(title: const Text('Pointer Events')),
       body: Listener(
         onPointerDown: (details) {
           setState(() {

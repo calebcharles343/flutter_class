@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class1/presentation/screens/main_screen.dart';
 
 class DrawerScreen extends StatelessWidget {
   const DrawerScreen({super.key});
@@ -6,9 +7,9 @@ class DrawerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Drawer Navigation')),
+      // appBar: AppBar(title: const Text('Drawer Navigation')),
       drawer: _buildDrawer(context),
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -18,6 +19,7 @@ class DrawerScreen extends StatelessWidget {
               'Drawer Example',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
+
             SizedBox(height: 10),
             Padding(
               padding: EdgeInsets.all(20),
@@ -25,6 +27,16 @@ class DrawerScreen extends StatelessWidget {
                 'Swipe from left or tap the menu icon to open the drawer.',
                 textAlign: TextAlign.center,
               ),
+            ),
+
+            ElevatedButton(
+              child: Text("Go to main page"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MainScreen()),
+                );
+              },
             ),
           ],
         ),
