@@ -131,6 +131,83 @@ class _MenuDrawerState extends State<MenuDrawer> {
               },
             ),
 
+            _buildExpandableSection(
+              title: 'UI Components',
+              icon: Icons.widgets,
+              isExpanded: _isUIComponentsExpanded,
+              children: [
+                _buildMenuItem(
+                  context,
+                  icon: Icons.widgets,
+                  title: 'Stateless Widget',
+                  route: '/widgets/stateless',
+                  isSelected: widget.currentRoute == '/widgets/stateless',
+                  indent: true,
+                ),
+                _buildMenuItem(
+                  context,
+                  icon: Icons.widgets,
+                  title: 'Stateful Widget',
+                  route: '/widgets/stateful',
+                  isSelected: widget.currentRoute == '/widgets/stateful',
+                  indent: true,
+                ),
+                _buildMenuItem(
+                  context,
+                  icon: Icons.check_box,
+                  title: 'Checkbox & Radio',
+                  route: '/ui/checkboxes',
+                  isSelected: widget.currentRoute == '/ui/checkboxes',
+                  indent: true,
+                ),
+                _buildMenuItem(
+                  context,
+                  icon: Icons.switch_right,
+                  title: 'Switches & Sliders',
+                  route: '/ui/switches',
+                  isSelected: widget.currentRoute == '/ui/switches',
+                  indent: true,
+                ),
+                _buildMenuItem(
+                  context,
+                  icon: Icons.topic,
+                  title: 'Dropdowns & Pickers',
+                  route: '/ui/dropdowns',
+                  isSelected: widget.currentRoute == '/ui/dropdowns',
+                  indent: true,
+                ),
+                _buildMenuItem(
+                  context,
+                  icon: Icons.calendar_today,
+                  title: 'Date & Time Pickers',
+                  route: '/ui/datetime-pickers',
+                  isSelected: widget.currentRoute == '/ui/datetime-pickers',
+                  indent: true,
+                ),
+                _buildMenuItem(
+                  context,
+                  icon: Icons.topic,
+                  title: 'Dialogs & Modals',
+                  route: '/ui/dialogs',
+                  isSelected: widget.currentRoute == '/ui/dialogs',
+                  indent: true,
+                ),
+                _buildMenuItem(
+                  context,
+                  icon: Icons.notifications,
+                  title: 'Snackbars & Toasts',
+                  route: '/ui/snackbars',
+                  isSelected: widget.currentRoute == '/ui/snackbars',
+                  indent: true,
+                ),
+              ],
+              onExpansionChanged: (expanded) {
+                setState(() {
+                  _isUIComponentsExpanded = expanded;
+                });
+              },
+            ),
+
             // Navigation Section - Expandable
             _buildExpandableSection(
               title: 'Navigation',
@@ -233,67 +310,6 @@ class _MenuDrawerState extends State<MenuDrawer> {
               onExpansionChanged: (expanded) {
                 setState(() {
                   // _isFormsExpanded = expanded;
-                });
-              },
-            ),
-
-            _buildExpandableSection(
-              title: 'UI Components',
-              icon: Icons.widgets,
-              isExpanded: _isUIComponentsExpanded,
-              children: [
-                _buildMenuItem(
-                  context,
-                  icon: Icons.check_box,
-                  title: 'Checkbox & Radio',
-                  route: '/ui/checkboxes',
-                  isSelected: widget.currentRoute == '/ui/checkboxes',
-                  indent: true,
-                ),
-                _buildMenuItem(
-                  context,
-                  icon: Icons.switch_right,
-                  title: 'Switches & Sliders',
-                  route: '/ui/switches',
-                  isSelected: widget.currentRoute == '/ui/switches',
-                  indent: true,
-                ),
-                _buildMenuItem(
-                  context,
-                  icon: Icons.topic,
-                  title: 'Dropdowns & Pickers',
-                  route: '/ui/dropdowns',
-                  isSelected: widget.currentRoute == '/ui/dropdowns',
-                  indent: true,
-                ),
-                _buildMenuItem(
-                  context,
-                  icon: Icons.calendar_today,
-                  title: 'Date & Time Pickers',
-                  route: '/ui/datetime-pickers',
-                  isSelected: widget.currentRoute == '/ui/datetime-pickers',
-                  indent: true,
-                ),
-                _buildMenuItem(
-                  context,
-                  icon: Icons.topic,
-                  title: 'Dialogs & Modals',
-                  route: '/ui/dialogs',
-                  isSelected: widget.currentRoute == '/ui/dialogs',
-                  indent: true,
-                ),
-                _buildMenuItem(
-                  context,
-                  icon: Icons.notifications,
-                  title: 'Snackbars & Toasts',
-                  route: '/ui/snackbars',
-                  isSelected: widget.currentRoute == '/ui/snackbars',
-                  indent: true,
-                ),
-              ],
-              onExpansionChanged: (expanded) {
-                setState(() {
-                  _isUIComponentsExpanded = expanded;
                 });
               },
             ),

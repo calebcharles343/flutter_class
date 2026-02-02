@@ -35,6 +35,8 @@ import 'package:flutter_class1/presentation/screens/gestures/scale_screen.dart';
 import 'package:flutter_class1/presentation/screens/gestures/swipe_screen.dart';
 import 'package:flutter_class1/presentation/screens/gestures/gesture_detector_screen.dart';
 import 'package:flutter_class1/presentation/screens/gestures/pointer_screen.dart';
+import 'package:flutter_class1/presentation/screens/widgets/stateful_widget_screen.dart';
+import 'package:flutter_class1/presentation/screens/widgets/stateless_widget_screen.dart';
 
 class Routes {
   static const home = '/';
@@ -59,6 +61,8 @@ class Routes {
   static const animationHero = '/animation/hero';
 
   // UI Components routes
+  static const widgetStateless = '/widgets/stateless';
+  static const widgetStateful = '/widgets/stateful';
   static const uiCheckboxes = '/ui/checkboxes';
   static const uiSwitches = '/ui/switches';
   static const uiDropdowns = '/ui/dropdowns';
@@ -111,6 +115,10 @@ class Routes {
         return MaterialPageRoute(builder: (_) => const HeroAnimationScreen());
 
       // UI Components routes
+      case widgetStateless:
+        return MaterialPageRoute(builder: (_) => const StatelessWidgetScreen());
+      case widgetStateful:
+        return MaterialPageRoute(builder: (_) => const StatefulWidgetScreen());
       case uiCheckboxes:
         return MaterialPageRoute(builder: (_) => const CheckboxesScreen());
       case uiSwitches:

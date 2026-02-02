@@ -35,6 +35,8 @@ import 'package:flutter_class1/presentation/screens/gestures/scale_screen.dart';
 import 'package:flutter_class1/presentation/screens/gestures/swipe_screen.dart';
 import 'package:flutter_class1/presentation/screens/gestures/gesture_detector_screen.dart';
 import 'package:flutter_class1/presentation/screens/gestures/pointer_screen.dart';
+import 'package:flutter_class1/presentation/screens/widgets/stateful_widget_screen.dart';
+import 'package:flutter_class1/presentation/screens/widgets/stateless_widget_screen.dart';
 
 import '../widgets/shared/menu_drawer.dart';
 import '../widgets/shared/app_bar.dart';
@@ -117,6 +119,14 @@ class _MainScreenState extends State<MainScreen> {
           break;
 
         // UI Components routes
+        case Routes.widgetStateless:
+          _currentScreen = const StatelessWidgetScreen();
+          _currentTitle = 'Stateless Widget';
+          break;
+        case Routes.widgetStateful:
+          _currentScreen = const StatefulWidgetScreen();
+          _currentTitle = 'Stateful Widget';
+          break;
         case Routes.uiCheckboxes:
           _currentScreen = const CheckboxesScreen();
           _currentTitle = 'Checkboxes & Radio';
@@ -237,6 +247,34 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
+  /////////////////////////////
+  //Bottom Navigation
+  /////////////////////////////
+
+  int _bottomNavIndex = 0;
+
+  void _onBottomNavTapped(int index) {
+    setState(() {
+      _bottomNavIndex = index;
+
+      // Switch between your main app sections
+      switch (index) {
+        case 0: // Home
+          _currentScreen = const HomeScreen();
+          _currentTitle = 'Dashboard';
+          break;
+        case 1: // Search
+          _currentScreen = const BottomNavScreen();
+          _currentTitle = 'Bottom Navigation';
+          break;
+        case 2: // Profile
+          _currentScreen = const TabsScreen();
+          _currentTitle = 'Tabs';
+          break;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -260,6 +298,19 @@ class _MainScreenState extends State<MainScreen> {
         currentRoute: _currentRoute,
       ),
       body: _currentScreen,
+
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _bottomNavIndex,
+        onTap: _onBottomNavTapped,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.navigation),
+            label: 'Navigate',
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.tab), label: 'Tabs'),
+        ],
+      ),
     );
   }
 }
