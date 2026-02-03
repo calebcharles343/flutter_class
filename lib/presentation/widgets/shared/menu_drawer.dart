@@ -18,7 +18,7 @@ class MenuDrawer extends StatefulWidget {
 
 class _MenuDrawerState extends State<MenuDrawer> {
   // Track which sections are expanded
-  bool _isLayoutExpanded = true;
+  bool _isLayoutExpanded = false;
   bool _isNavigationExpanded = false;
   bool _isAnimationExpanded = false;
   bool _isUIComponentsExpanded = false;
@@ -27,6 +27,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
   bool _isNetworkingExpanded = false;
   bool _isStorageExpanded = false;
   bool _isAdvancedExpanded = false;
+  bool _isTodoAppExpanded = false;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +43,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  const Icon(Icons.class_, size: 48, color: Colors.white),
+                  const Icon(Icons.class_, size: 48, color: Colors.amber),
                   const SizedBox(height: 8),
                   Text(
                     'Flutter Class',
@@ -54,7 +55,11 @@ class _MenuDrawerState extends State<MenuDrawer> {
                   ),
                   Text(
                     'Learning Flutter',
-                    style: TextStyle(color: Colors.grey.shade300, fontSize: 14),
+                    style: TextStyle(
+                      color: Colors.amber.shade300,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
@@ -67,6 +72,28 @@ class _MenuDrawerState extends State<MenuDrawer> {
               title: 'Dashboard',
               route: '/main',
               isSelected: widget.currentRoute == '/main',
+            ),
+
+            // Layout Section - Expandable
+            _buildExpandableSection(
+              title: 'Todo App',
+              icon: Icons.apps,
+              isExpanded: _isTodoAppExpanded,
+              children: [
+                _buildMenuItem(
+                  context,
+                  icon: Icons.apps,
+                  title: 'Todo App',
+                  route: '/todoApp/todo',
+                  isSelected: widget.currentRoute == '/todoApp/todo',
+                  indent: true,
+                ),
+              ],
+              onExpansionChanged: (expanded) {
+                setState(() {
+                  _isTodoAppExpanded = expanded;
+                });
+              },
             ),
 
             // Layout Section - Expandable
@@ -131,6 +158,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
               },
             ),
 
+            //UI Section
             _buildExpandableSection(
               title: 'UI Components',
               icon: Icons.widgets,
@@ -158,6 +186,14 @@ class _MenuDrawerState extends State<MenuDrawer> {
                   title: 'Checkbox & Radio',
                   route: '/ui/checkboxes',
                   isSelected: widget.currentRoute == '/ui/checkboxes',
+                  indent: true,
+                ),
+                _buildMenuItem(
+                  context,
+                  icon: Icons.text_fields,
+                  title: 'Textfield',
+                  route: '/ui/textfield',
+                  isSelected: widget.currentRoute == '/ui/textfield',
                   indent: true,
                 ),
                 _buildMenuItem(

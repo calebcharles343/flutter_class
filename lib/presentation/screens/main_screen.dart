@@ -20,6 +20,7 @@ import 'package:flutter_class1/presentation/screens/navigation/drawer_screen.dar
 import 'package:flutter_class1/presentation/screens/animation/basic_animation_screen.dart';
 import 'package:flutter_class1/presentation/screens/animation/transitions_screen.dart';
 import 'package:flutter_class1/presentation/screens/animation/hero_animation_screen.dart';
+import 'package:flutter_class1/presentation/screens/todoApp/todo_screen.dart';
 
 // UI Components screens
 import 'package:flutter_class1/presentation/screens/ui/checkboxes_screen.dart';
@@ -35,6 +36,7 @@ import 'package:flutter_class1/presentation/screens/gestures/scale_screen.dart';
 import 'package:flutter_class1/presentation/screens/gestures/swipe_screen.dart';
 import 'package:flutter_class1/presentation/screens/gestures/gesture_detector_screen.dart';
 import 'package:flutter_class1/presentation/screens/gestures/pointer_screen.dart';
+import 'package:flutter_class1/presentation/screens/ui/textField_screen.dart';
 import 'package:flutter_class1/presentation/screens/widgets/stateful_widget_screen.dart';
 import 'package:flutter_class1/presentation/screens/widgets/stateless_widget_screen.dart';
 
@@ -90,6 +92,12 @@ class _MainScreenState extends State<MainScreen> {
           _currentTitle = 'Table';
           break;
 
+        // Todo app routes
+        case Routes.todoDash:
+          _currentScreen = const TodoScreen();
+          _currentTitle = 'Todo Dash';
+          break;
+
         // Navigation routes
         case Routes.navigationBottomNav:
           _currentScreen = const BottomNavScreen();
@@ -130,6 +138,10 @@ class _MainScreenState extends State<MainScreen> {
         case Routes.uiCheckboxes:
           _currentScreen = const CheckboxesScreen();
           _currentTitle = 'Checkboxes & Radio';
+          break;
+        case Routes.uiTextfield:
+          _currentScreen = const TextfieldScreen();
+          _currentTitle = 'Textfield';
           break;
         case Routes.uiSwitches:
           _currentScreen = const SwitchesScreen();

@@ -20,6 +20,7 @@ import 'package:flutter_class1/presentation/screens/navigation/drawer_screen.dar
 import 'package:flutter_class1/presentation/screens/animation/basic_animation_screen.dart';
 import 'package:flutter_class1/presentation/screens/animation/transitions_screen.dart';
 import 'package:flutter_class1/presentation/screens/animation/hero_animation_screen.dart';
+import 'package:flutter_class1/presentation/screens/todoApp/todo_screen.dart';
 
 // UI Components screens
 import 'package:flutter_class1/presentation/screens/ui/checkboxes_screen.dart';
@@ -35,6 +36,7 @@ import 'package:flutter_class1/presentation/screens/gestures/scale_screen.dart';
 import 'package:flutter_class1/presentation/screens/gestures/swipe_screen.dart';
 import 'package:flutter_class1/presentation/screens/gestures/gesture_detector_screen.dart';
 import 'package:flutter_class1/presentation/screens/gestures/pointer_screen.dart';
+import 'package:flutter_class1/presentation/screens/ui/textField_screen.dart';
 import 'package:flutter_class1/presentation/screens/widgets/stateful_widget_screen.dart';
 import 'package:flutter_class1/presentation/screens/widgets/stateless_widget_screen.dart';
 
@@ -50,6 +52,9 @@ class Routes {
   static const layoutStack = '/layout/stack';
   static const layoutTable = '/layout/table';
 
+  // Todo App Routes
+  static const todoDash = '/todoApp/todo';
+
   // Navigation group routes
   static const navigationBottomNav = '/navigation/bottom-nav';
   static const navigationTabs = '/navigation/tabs';
@@ -63,6 +68,7 @@ class Routes {
   // UI Components routes
   static const widgetStateless = '/widgets/stateless';
   static const widgetStateful = '/widgets/stateful';
+  static const uiTextfield = '/ui/textfield';
   static const uiCheckboxes = '/ui/checkboxes';
   static const uiSwitches = '/ui/switches';
   static const uiDropdowns = '/ui/dropdowns';
@@ -98,6 +104,10 @@ class Routes {
       case layoutTable:
         return MaterialPageRoute(builder: (_) => const TableScreen());
 
+      // Todo app routes
+      case todoDash:
+        return MaterialPageRoute(builder: (_) => const TodoScreen());
+
       // Navigation routes
       case navigationBottomNav:
         return MaterialPageRoute(builder: (_) => const BottomNavScreen());
@@ -121,6 +131,8 @@ class Routes {
         return MaterialPageRoute(builder: (_) => const StatefulWidgetScreen());
       case uiCheckboxes:
         return MaterialPageRoute(builder: (_) => const CheckboxesScreen());
+      case uiTextfield:
+        return MaterialPageRoute(builder: (_) => const TextfieldScreen());
       case uiSwitches:
         return MaterialPageRoute(builder: (_) => const SwitchesScreen());
       case uiDropdowns:
