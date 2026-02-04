@@ -51,3 +51,10 @@ const Map<String, List<String>> filesToGenerate = {
 - ✅ Summary of operations
 
 The script will create all the specified files with proper Flutter widget structure, ready for you to implement your specific functionality!
+
+///////////////////
+Dependency Restart
+///////////////////
+
+flutter clean
+flutter pub get

@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 final ThemeData appTheme = ThemeData(
-  primarySwatch: Colors.deepPurple,
+  primarySwatch: Colors.amber,
   visualDensity: VisualDensity.adaptivePlatformDensity,
   appBarTheme: const AppBarTheme(elevation: 0, centerTitle: true),
   inputDecorationTheme: InputDecorationTheme(
